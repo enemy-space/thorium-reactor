@@ -29,7 +29,7 @@ data:extend({
       width = 442,
 	  height = 200,
     },
-	fluid_boxes =
+	fluid_box =
     {
       {
         production_type = "input",
