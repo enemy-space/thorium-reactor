@@ -1,6 +1,5 @@
 data:extend({
-
- {
+  {
     type = "item",
     name = "reactor",
     icon = "__Molten Salt Thorium Reactor__/graphics/reactor/icon-reactor.png",
@@ -18,5 +17,4 @@ data:extend({
     order= "c-d-b",
     stack_size= 100,
   }
-
 })
