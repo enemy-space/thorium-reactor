@@ -31,23 +31,15 @@ data:extend({
     },
 	fluid_box =
     {
+      base_area = 250,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections =
       {
-        production_type = "input",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {0, -2} }}
+        { position = {-1, -2} },
+        { position = {2, 1} },
+        { position = {1, 2} },
+        { position = {-2, -1} },
       },
-      {
-        production_type = "output",
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = {{ type="output", position = {0, 2} }}
-      },
-      off_when_no_fluid_recipe = true
     },
 	power = "5000kW"
 
