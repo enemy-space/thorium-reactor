@@ -1,6 +1,8 @@
+require ("util")
+
 data:extend({
  {
-    type = "solar-panel",
+    type = "generator",
     name = "reactor",
     icon = "__Molten Salt Thorium Reactor__/graphics/reactor/icon-reactor.png",
     flags = {"placeable-neutral", "player-creation"},
@@ -9,10 +11,16 @@ data:extend({
     corpse = "big-remnants",
     collision_box = {{-6.4, -2.4}, {2.0, 2.4}},
     selection_box = {{-6.5, -2.5}, {2.1, 2.5}},
+	burner = 
+        {
+          effectivity = 0.25,
+          emissions = 20,
+          fuel_inventory_size = 2,
+        },
     energy_source =
     {
       type = "electric",
-      usage_priority = "solar"
+      usage_priority = "primary-output"
     },
     picture =
     {
@@ -20,9 +28,29 @@ data:extend({
       priority = "high",
       width = 442,
 	  height = 200,
-      
     },
-    production = "6000kW"
+	fluid_boxes =
+    {
+      {
+        production_type = "input",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {0, -2} }}
+      },
+      {
+        production_type = "output",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = {{ type="output", position = {0, 2} }}
+      },
+      off_when_no_fluid_recipe = true
+    },
+	power = "5000kW"
+
   },
   }
   )
