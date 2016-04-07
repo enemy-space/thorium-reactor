@@ -11,15 +11,25 @@ data:extend({
     corpse = "big-remnants",
     collision_box = {{-6.4, -2.4}, {2.0, 2.4}},
     selection_box = {{-6.5, -2.5}, {2.1, 2.5}},
+	effectivity = 1,
+	fluid_usage_per_tick = 0,
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
 	burner = 
         {
-          effectivity = 0.25,
+          effectivity = 1,
           emissions = 20,
           fuel_inventory_size = 2,
         },
     energy_source =
     {
       type = "electric",
+	  effectivity = 1,
       usage_priority = "primary-output"
     },
     picture =
@@ -35,12 +45,27 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {-1, -2} },
-        { position = {2, 1} },
-        { position = {1, 2} },
-        { position = {-2, -1} },
+    
       },
     },
+	horizontal_animation =
+	{
+	
+			filename = "__Molten Salt Thorium Reactor__/graphics/reactor/reactor-lowres.png",
+			line_length = 0,
+			width = 0,
+			height = 0,
+			frame_count = 1,
+	},
+	vertical_animation =
+	{
+	
+			filename = "__Molten Salt Thorium Reactor__/graphics/reactor/reactor-lowres.png",
+			line_length = 0,
+			width = 0,
+			height = 0,
+			frame_count = 1,
+	},
 	power = "5000kW"
 
   },
