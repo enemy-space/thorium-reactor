@@ -53,8 +53,8 @@ data:extend({
 	
 			filename = "__Molten Salt Thorium Reactor__/graphics/reactor/reactor-lowres.png",
 			line_length = 0,
-			width = 0,
-			height = 0,
+			width = 442,
+			height = 200,
 			frame_count = 1,
 	},
 	vertical_animation =
@@ -62,8 +62,8 @@ data:extend({
 	
 			filename = "__Molten Salt Thorium Reactor__/graphics/reactor/reactor-lowres.png",
 			line_length = 0,
-			width = 0,
-			height = 0,
+			width = 442,
+			height = 200,
 			frame_count = 1,
 	},
 	power = "5000kW"
